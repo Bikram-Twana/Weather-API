@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>Index Page</title>
+</head>
+<body>
+<h2>Temperature Table below: </h2>
+<div class="container">
+      <table class="table">
+        <thead>
+        <tr>
+            <th>City</th>
+            <th>Description</th>
+            <th>Feels Like</th>
+            <th>Tempearature °C</th>
+            <th>Country</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr th:each = "currentWeather: ${currentWeather}" >
+            <td th:text="${currentWeather.name}"></td>
+            <td th:text="${currentWeather.description}"></td>
+            <td th:text="${currentWeather.feelsLike}"></td>
+            <td th:text="${currentWeather.temperature}"></td>
+            <td th:text="${currentWeather.country}"></td>
+        </tr>
+        <tr class="success" th:each = "currentWeather: ${currentWeathers}" >
+            <td th:text="${currentWeather.name}"></td>
+            <td th:text="${currentWeather.description}"></td>
+            <td th:text="${currentWeather.feelsLike}"></td>
+            <td th:text="${currentWeather.temperature}"></td>
+            <td th:text="${currentWeather.country}"></td>
+        </tr>
+        <tr class="danger" th:each = "currentWeather: ${currentWeather1}">
+            <td th:text="${currentWeather.name}"></td>
+            <td th:text="${currentWeather.description}"></td>
+            <td th:text="${currentWeather.feelsLike}"></td>
+            <td th:text="${currentWeather.temperature}"></td>
+            <td th:text="${currentWeather.country}"></td>
+        </tr>
+        <tr class="info" th:each = "currentWeather: ${currentWeather2}">
+            <td th:text="${currentWeather.name}"></td>
+            <td th:text="${currentWeather.description}"></td>
+            <td th:text="${currentWeather.feelsLike}"></td>
+            <td th:text="${currentWeather.temperature}"></td>
+            <td th:text="${currentWeather.country}"></td>
+        </tr>
+        <tr class="warning" th:each = "currentWeather: ${currentWeather3}">
+            <td th:text="${currentWeather.name}"></td>
+            <td th:text="${currentWeather.description}"></td>
+            <td th:text="${currentWeather.feelsLike}"></td>
+            <td th:text="${currentWeather.temperature}"></td>
+            <td th:text="${currentWeather.country}"></td>
+        </tr>
+        <tr class="active" th:each = "currentWeather: ${currentWeather4}">
+            <td th:text="${currentWeather.name}"></td>
+            <td th:text="${currentWeather.description}"></td>
+            <td th:text="${currentWeather.feelsLike}"></td>
+            <td th:text="${currentWeather.temperature}"></td>
+            <td th:text="${currentWeather.country}"></td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
