@@ -1,5 +1,5 @@
 # Weather-API
-Spring Boot Web to fetch data from openWeatherMap API
+Spring Boot Web to fetch data from openWeatherMap API with RestTemplate, ObjectMapper, UriTemplate, ResponseEntity and Thymeleaf.
 
 This Web Application Contains HTML tables with the list of different fetch columns and real-time weather data of differnt cities and countries.
 Temperature is changed into celsius.
